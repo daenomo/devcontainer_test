@@ -1,0 +1,15 @@
+{
+  "name": "alal-haskell",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "alal-haskell",
+  "workspaceFolder": "/home/dev-user/app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "haskell.haskell",
+        "justusadam.language-haskell"
+      ]
+    }
+  }
+//  "postCreateCommand": "stack setup && stack build"
+}
