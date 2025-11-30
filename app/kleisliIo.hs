@@ -22,13 +22,15 @@ main :: IO ()
 main = do
   pipelineIO ()
 
--- 左単位律
-return 3 >>= (\x -> Just (x+1))
+-- 左単位律の例
+exampleLeftUnit :: Maybe Int
+exampleLeftUnit = return 3 >>= (\x -> Just (x+1))
 -- = Just 3 >>= (\x -> Just (x+1))
 -- = Just 4
 -- 同じく (\x -> Just (x+1)) 3 = Just 4
 
--- 右単位律
-Just 3 >>= return
+-- 右単位律の例
+exampleRightUnit :: Maybe Int
+exampleRightUnit = Just 3 >>= return
 -- = Just 3
 
